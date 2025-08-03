@@ -6,11 +6,11 @@ const port = process.env.PORT || 5000;
 const cookieParser = require('cookie-parser');
 const authRoutes = require('./routes/authRoute');
 const cors = require('cors');
-const movieRoutes = require('./routes/movieRoutes');
+
 
 
 app.use(cors({
-  origin: 'http://localhost:3000', // allow only your frontend
+  origin: 'http://localhost:3000', 
   methods: ['GET', 'POST', 'PUT', 'DELETE'],
   credentials: true
 }));
@@ -26,7 +26,7 @@ connectDB();
 
 // Routes
 app.use('/api/auth', authRoutes);
-app.use("/api/movies", movieRoutes);
+
 
 
 
